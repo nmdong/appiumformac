@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190504 18:48:42.028" generator="Robot 3.1.1 (Python 2.7.14 on win32)">
+<suite source="E:\Training_TMA\robotframwork\appium_for_mac\examples\TestCase\TC01_Calculator_Add.robot" id="s1" name="TC01 Calculator Add">
+<test id="s1-t1" name="TC01_Calculator_Add_With_Click">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>1. Lauch App</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:48:42.475" starttime="20190504 18:48:42.474"></status>
+</kw>
+<kw name="Lauch App" library="cal">
+<arguments>
+<arg>10.102.1.102</arg>
+<arg>4622</arg>
+</arguments>
+<msg timestamp="20190504 18:48:42.476" level="INFO">Start function launch app calculator for mac</msg>
+<msg timestamp="20190504 18:48:43.067" level="INFO">Opening the Calculator</msg>
+<msg timestamp="20190504 18:48:43.777" level="INFO">Open window: [u'0', u'1']</msg>
+<msg timestamp="20190504 18:48:43.777" level="INFO">lauch_app successfully</msg>
+<status status="PASS" endtime="20190504 18:48:43.777" starttime="20190504 18:48:42.475"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>2.do some calculations with clicks</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:48:43.778" starttime="20190504 18:48:43.777"></status>
+</kw>
+<kw name="Do Some Calculations With Clicks" library="cal">
+<msg timestamp="20190504 18:48:57.977" level="INFO">Clearing the calculator
+----
+Entering the first number
+1 --&gt; /AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='one']
+----
+4 --&gt; /AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='four']
+----
+0 --&gt; /AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='zero']
+----
+Clicking the "+" button
+----
+Entering the second number
+7 --&gt; /AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='seven']
+----
+8 --&gt; /AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='eight']
+----
+4 --&gt; /AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='four']
+----
+Clicking the "=" button
+----
+Reading result from screen
+Reading result from screen
+Correct Result: 924</msg>
+<status status="PASS" endtime="20190504 18:48:57.977" starttime="20190504 18:48:43.778"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>3. exit app</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:48:57.978" starttime="20190504 18:48:57.978"></status>
+</kw>
+<kw name="Exit App" library="cal">
+<msg timestamp="20190504 18:49:01.814" level="INFO">Click to Quit Calculator</msg>
+<msg timestamp="20190504 18:49:02.877" level="INFO">Quitting the WebDriver session</msg>
+<status status="PASS" endtime="20190504 18:49:02.877" starttime="20190504 18:48:57.978"></status>
+</kw>
+<kw type="teardown" name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>clean_up</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:49:02.878" starttime="20190504 18:49:02.877"></status>
+</kw>
+<tags>
+<tag>DEBUG</tag>
+</tags>
+<status status="PASS" endtime="20190504 18:49:02.878" critical="yes" starttime="20190504 18:48:42.473"></status>
+</test>
+<test id="s1-t2" name="TC01_Calculator_Add_Keystrokes">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>1. Lauch App</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:49:02.880" starttime="20190504 18:49:02.879"></status>
+</kw>
+<kw name="Lauch App" library="cal">
+<arguments>
+<arg>10.102.1.102</arg>
+<arg>4622</arg>
+</arguments>
+<msg timestamp="20190504 18:49:02.880" level="INFO">Start function launch app calculator for mac</msg>
+<msg timestamp="20190504 18:49:03.267" level="INFO">Opening the Calculator</msg>
+<msg timestamp="20190504 18:49:03.977" level="INFO">Open window: [u'0', u'1']</msg>
+<msg timestamp="20190504 18:49:03.977" level="INFO">lauch_app successfully</msg>
+<status status="PASS" endtime="20190504 18:49:03.977" starttime="20190504 18:49:02.880"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>2.do some calculations with keystrokes</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:49:03.978" starttime="20190504 18:49:03.978"></status>
+</kw>
+<kw name="Do Some Calculations With Keystrokes" library="cal">
+<msg timestamp="20190504 18:49:06.514" level="INFO">Clearing the calculator
+----
+Typing the first number
+----
+Typing the "+" button
+----
+Typing the second number
+----
+Typing the "=" button
+----
+Reading result from screen
+Reading result from screen
+Correct Result: 501</msg>
+<status status="PASS" endtime="20190504 18:49:06.514" starttime="20190504 18:49:03.978"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>3. exit app</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:49:06.515" starttime="20190504 18:49:06.514"></status>
+</kw>
+<kw name="Exit App" library="cal">
+<msg timestamp="20190504 18:49:10.015" level="INFO">Click to Quit Calculator</msg>
+<msg timestamp="20190504 18:49:11.067" level="INFO">Quitting the WebDriver session</msg>
+<status status="PASS" endtime="20190504 18:49:11.067" starttime="20190504 18:49:06.515"></status>
+</kw>
+<kw type="teardown" name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>clean_up</arg>
+</arguments>
+<status status="PASS" endtime="20190504 18:49:11.068" starttime="20190504 18:49:11.067"></status>
+</kw>
+<status status="PASS" endtime="20190504 18:49:11.068" critical="yes" starttime="20190504 18:49:02.879"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" endtime="20190504 18:49:11.069" starttime="20190504 18:48:42.033"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">DEBUG</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TC01 Calculator Add" pass="2">TC01 Calculator Add</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
