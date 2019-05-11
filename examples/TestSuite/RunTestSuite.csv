@@ -1,0 +1,4 @@
+TestSuite_01\TC01_Calculator_Standard.robot
+TestSuite_01\TC02_AppiumWeb_Use_AppiumLibrary.robot
+TestSuite_01\TC03_AppiumWeb_Use_SeleniumLibrary.robot
+TestSuite_01\TC04_Github_Use_SeleniumLibrary.robot
