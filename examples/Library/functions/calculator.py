@@ -12,7 +12,8 @@ import unittest
 import time
 import logging
 import driver
-from Library.pom import calculatorPage, utility
+from Library.pom.utility import utility
+from Library.pom.calculatorPage import calculatorStandardPage
 
 from random import randint
 
@@ -45,33 +46,33 @@ class Calculator(unittest.TestCase):
 
     def do_some_calculations_with_clicks(self):
         print 'Clearing the calculator'
-        calculatorPage.CalculatorPage().clearing_the_calculator(self.calculator_driver)
+        calculatorStandardPage.CalculatorStandardPage().clearing_the_calculator(self.calculator_driver)
 
         rand1 = randint(0, 1000)
         rand2 = randint(0, 1000)
 
         print 'Entering the first number'
         for num in str(rand1):
-            n = calculatorPage.CalculatorPage().numToAXPath(num)
+            n = calculatorStandardPage.CalculatorStandardPage().numToAXPath(num)
             print str(num) + ' --> ' + str(n)
             utility.Utility().click_to_element(driver=self.calculator_driver, element=self.calculator_driver.find_element_by_xpath(n))
             time.sleep(1)
 
         print 'Clicking the "+" button'
-        calculatorPage.CalculatorPage().clicking_the_add_button(self.calculator_driver)
+        calculatorStandardPage.CalculatorStandardPage().clicking_the_add_button(self.calculator_driver)
 
         print 'Entering the second number'
         for num in str(rand2):
-            n = calculatorPage.CalculatorPage().numToAXPath(num)
+            n = calculatorStandardPage.CalculatorStandardPage().numToAXPath(num)
             print str(num) + ' --> ' + str(n)
             utility.Utility().click_to_element(self.calculator_driver, self.calculator_driver.find_element_by_xpath(n))
             time.sleep(2)
 
         print 'Clicking the "=" button'
-        calculatorPage.CalculatorPage().clicking_the_equals_button(self.calculator_driver)
+        calculatorStandardPage.CalculatorStandardPage().clicking_the_equals_button(self.calculator_driver)
 
         print 'Reading result from screen'
-        answer = calculatorPage.CalculatorPage().get_result_from_screen(self.calculator_driver)
+        answer = calculatorStandardPage.CalculatorStandardPage().get_result_from_screen(self.calculator_driver)
 
         if int(answer) == (rand1 + rand2):
             print 'Correct Result: ' + answer
@@ -80,7 +81,7 @@ class Calculator(unittest.TestCase):
 
     def do_some_calculations_with_keystrokes(self):
         print 'Clearing the calculator'
-        calculatorPage.CalculatorPage().clearing_the_calculator(self.calculator_driver)
+        calculatorStandardPage.CalculatorStandardPage().clearing_the_calculator(self.calculator_driver)
 
         rand1 = randint(0, 1000)
         rand2 = randint(0, 1000)
@@ -98,7 +99,7 @@ class Calculator(unittest.TestCase):
         utility.Utility().send_keys(self.calculator_driver, '=')
 
         print 'Reading result from screen'
-        answer = calculatorPage.CalculatorPage().get_result_from_screen(self.calculator_driver)
+        answer = calculatorStandardPage.CalculatorStandardPage().get_result_from_screen(self.calculator_driver)
 
         if int(answer) == (rand1 + rand2):
             print 'Correct Result: ' + answer
